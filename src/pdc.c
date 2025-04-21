@@ -1,4 +1,15 @@
+#include <stdio.h>
+#include "pdc.h"
+#include "utils.h"
 
+void checkPDC(CarState *car) {
+    car->space = randomIntRange(0, 200); // z.B. Abstand in cm
+    if (car->space < 50)
+        printf("Warning: Obstacle very close! (%d cm)\n", car->space);
+    else
+        printf("Obstacle distance: %d cm\n", car->space);
+}
 
-// simulates distance to an obstacle
-// shows warning states: green, yellow, red and warning message
+void printPDCStatus(const CarState *car) {
+    printf("Current distance to obstacle: %d cm\n", car->space);
+}

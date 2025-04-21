@@ -3,7 +3,7 @@
 
 typedef struct {
     int speed; // km/h
-    int gear; // 0 Neutral, 1-6, -1 Reverse
+    int gear; // 0 Neutral, 1-6, -1 Reverse, -2 Parked
     int cruiseControlActive; // o/1
     int target_cruiseControlSpeed;
     int insideTemp; // Celsius
@@ -12,5 +12,6 @@ typedef struct {
 } CarState;
 
 void initCarState(CarState *car);
+void printCarState(const CarState *car);
 
 #endif

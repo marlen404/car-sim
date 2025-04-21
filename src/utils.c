@@ -10,7 +10,7 @@ void initRandom() {
     srand(time(NULL)); // init random seed with current time
 }
 
-int randomInRange(int min, int max) {
+int randomIntRange(int min, int max) {
     if(min>max) {
         int temp = min;
         min = max;

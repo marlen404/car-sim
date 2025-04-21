@@ -1,6 +1,11 @@
+#include <stdio.h>
+#include "air_conditioning.h"
 
+void setInsideTemperature(CarState *car, int temp) {
+    car->insideTemp = temp;
+    printf("Temperature set to %dC.\n", car->insideTemp);
+}
 
-// set target_temp
-// simulate in/out temperature
-// regulate temp
-// show temp display
+void printACStatus(const CarState *car) {
+    printf("Current cabin temperature: %dC.\n", car->insideTemp);
+}

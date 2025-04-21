@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include "car_state.h"
 
-// defines central CarState struct
-// pace, gear, speed, temp (in/out), space, lights status
-// basic functions: print state, reset state
-
 void initCarState(CarState *car) {
     car->speed = 0;
     car->gear = -2; // Parked
@@ -25,7 +21,7 @@ void printCarState(const CarState *car) {
     } else {
         printf("\n");
     }
-    printf("Inside Temperature: %d °C\n", car->insideTemp);
+    printf("Inside Temperature: %d C\n", car->insideTemp);
     printf("Lights Status: %s\n", car->lightsStatus ? "On" : "Off");
     printf("Space to obstacle: %d cm\n", car->space);
     printf("____________________\n");

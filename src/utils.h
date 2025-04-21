@@ -3,6 +3,6 @@
 
 void initRandom();
 
-int randomInRange(int min, int max);
+int randomIntRange(int min, int max);
 
 #endif
